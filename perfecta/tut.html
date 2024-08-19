@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        :root {
+            --second-color: black;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(241, 195, 109, 0.911);
+            display: flex;
+            justify-content: center;
+
+            & .lock {
+                position: absolute;
+                top: 15%;
+
+                & .head-outer {
+                    /* opacity: .8; */
+                    width: 20rem;
+                    height: 13rem;
+                    background-color: black;
+                    border-top-left-radius: 50%;
+                    border-top-right-radius: 50%;
+                    /* border-bottom-left-radius: .5rem; */
+                    /* border-bottom-right-radius: .5rem; */
+
+
+                    & .head-inner {
+                        position: absolute;
+                        width: 15rem;
+                        height: 10.4rem;
+                        background-color: rgba(241, 195, 109);
+                        border-top-left-radius: 50%;
+                        border-top-right-radius: 50%;
+                        top: 10%;
+                        left: 13%;
+                    }
+
+                    & span {
+
+                        background-color: var(--second-color);
+                        position: absolute;
+                        width: 2.3rem;
+                        height: 1rem;
+                        top: 46%;
+                        left: 86.2%;
+                        border: none;
+                    }
+                }
+
+            }
+
+            & .bottom-body {
+                width: 21rem;
+                height: 13rem;
+                background-color: black;
+                margin-left: -.5rem;
+                /* text-align: center; */
+                border-top-left-radius: .5rem;
+                border-top-right-radius: .5rem;
+                border-bottom-left-radius: .5rem;
+                border-bottom-right-radius: .5rem;
+                &::after{
+                    position: relative;
+                    width: 21rem;
+                    height: 1rem;
+                    background-color: rgba(94, 226, 42, 0.795);
+                    left: 50%;
+                }
+                & form {
+                    padding-top: 1.4rem;
+                    padding-bottom: 1.4rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    color: white;
+
+                    /* background-color:rgba(241, 195, 109, 0.911); */
+                }
+
+                & span {
+                    cursor: pointer;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="lock">
+            <div class="head-outer">
+                <div class="head-inner"></div>
+                <span class="lock-mouth"></span>
+            </div>
+            <div class="bottom-body">
+                <form action="" method="post">
+                    <table>
+                        <!-- <thead>
+                        <th><img src="./download (2).png" alt="" srcset=""></th>
+                    </thead> -->
+                        <tbody>
+                            <tr>
+
+                                <td><label for="Email">Email:</label><input type="email" name="" id="mail-info"
+                                        required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="Password">Password:</label><input type="password" name="" id="pass-info"
+                                        minlength="8" maxlength="14" required></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="">Forget password?</a></td>
+                            </tr>
+                            <tr>
+                                <td><span type="submit" class="forget">Login</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><button type="button">Login using Google</button></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><button type="button">Login using Facebook</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>I don't have an account yet?<a href="perf_sign.html">Sign up &RightArrow;</a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                            <tr>
+                                <td>Powered by Big3 tech corporation Inc.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script>
+    var link = document.querySelector('.forget');
+    var form = document.querySelector('form');
+    var rootVar = document.querySelector(':root');
+    var lockMouth = document.querySelector('.lock-mouth');
+    var headOuter = document.querySelector('.head-outer');
+    var headInner = document.querySelector('.head-inner');
+    link.addEventListener('click', function () {
+        headOuter.style.height = '14rem';
+        headInner.style.height = '11.3rem';
+        lockMouth.style.top = '48.2%';
+        lockMouth.style.width = '2.7rem';
+        form.style.opacity='0';
+        rootVar.style.setProperty('--second-color', "rgba(241, 195, 109)");
+    })
+</script>
+
+</html>

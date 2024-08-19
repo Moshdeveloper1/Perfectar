@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    background-image: url(./img/backimg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    filter: contrast(1.1);
+}
+
+.login-info {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: max-content;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    /* text-align: center; */
+
+    box-shadow:
+        0 0 2px 2px rgba(0, 0, 0, 0.274);
+    background-color: rgba(243, 243, 243, 0.164);
+
+    & table {
+        padding: 2rem;
+
+        & thead th {
+            align-self: center;
+        }
+
+        & td {
+            padding-top: .5rem;
+        }
+
+        & th img {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        & tr label {
+            font-size: larger;
+            font-weight: 900;
+        }
+
+        & tr input {
+            height: 1.7rem;
+            padding: .2rem;
+            border: none;
+            border-radius: .3rem;
+            /* outline: none; */
+            overflow: hidden;
+
+            font-weight: 600;
+
+        }
+
+        & tr a {
+            text-decoration: none;
+            font-size: larger;
+            color: black;
+        }
+
+        & tr button {
+            background-color: rgb(29, 30, 83);
+            color: white;
+            padding: .5rem;
+            border: none;
+            border-radius: .2rem;
+            font-size: medium;
+            transition: 2s;
+        }
+
+        & tfoot td {
+            font-size: large;
+            font-weight: bold;
+        }
+    }
+
+}
+
+/* tbody:last-child{
+padding-top: .2rem;
+} */
+tbody tr:has(button) {
+    text-align: center;
+    padding-top: .2rem;
+
+}
+tbody tr a{
+    font-weight: 800;
+}
+tbody tr:first-of-type input::first-letter {
+    text-transform: uppercase;
+}
+
+tbody #mail-info {
+    /* width: 7rem; */
+    margin-left: 2.3rem;
+}
+
+tbody #pass-info {
+    /* width: 7rem; */
+    margin-left: .5rem;
+}
+
+.login-info span {
+    display: block;
+    background-color: rgba(243, 243, 243, 0.164);
+    width: 7rem;
+    position: absolute;
+    height: 8rem;
+    /* clip-path:calc(); */
+    box-shadow:
+
+        0 0 2px 2px rgba(0, 0, 0, 0.274);
+}
+
+.login-info span::after {
+    content: '';
+    background-color: rgba(12, 12, 12, 0.479);
+    height: 1rem;
+    width: 7rem;
+    display: block;
+    margin-top: 130%;
+    clip-path: ellipse();
+}
+
+.login-info span::before {
+    content: '';
+    background-color: transparent;
+    z-index: 300;
+    height: 8rem;
+    width: 10rem;
+    position: absolute;
+    border-top-left-radius: 50%;
+
+    display: block;
+    border: none;
+    margin-left: 100%;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.274) inset;
+    /* margin-top: 2rem; */
+}
